@@ -9,12 +9,12 @@
 <table class="table table-responsive table-striped">
   <thead>
     <tr>
+
       <th scope="col">#</th>
       <th scope="col">Nombre</th>
       <th scope="col">Apellidos</th>
       <th scope="col">Email</th>
       <th scope="col">Phone</th>
-      <th scope="col">Acciones</th>
     </tr>
   </thead>
   <tbody>
@@ -24,17 +24,17 @@
       <th scope="row">Lopez</th>
       <th scope="row">MLopez@gmail</th>
       <th scope="row">123 123 123</th>
-    </td>
-    </tr>
-    </table>
-    <div class="col-md-3 m-4">
-      <a href="{{ route('edit', 1)}}" class="btn btn-warning btn-lg disable">Editar</a>
+      <th scope="row">  
+      <a href="{{ route('edit', 1)}}" class="btn btn-warning btn-lg disable">Editar</a></th>
+      <th scope="row">
     <form method="POST" action="{{ route('delete')}}"> 
         @csrf <!--token-->
         @method('DELETE') <!--modifica el método del formulario, ya que no admite DELETE-->
       <button type="submit" href="#"  class="btn btn-danger btn-lg disable">Delete</button>
       </form>
-      </div>
+   </th>
+    </tr>
+    </table>
   </tbody>
 </div>
 @endsection

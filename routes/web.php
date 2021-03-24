@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\usuarioController;
+use App\Http\Controllers\cookieController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,14 +43,10 @@ Route::delete ('/', function (){
 
 
 //LOGIN USUARIO
-Route::get ('/login', [usuarioController::class, 'login'])->name('login');
-//Intento de crear una cookie al hacer login
-Route::post('/login', function(){
-	$nueva_cookie = cookie('usuario', 'valorprobando', 2);
-	$response = response("Cookie en camino");
-	$response->withCookie($nueva_cookie);
-	return $response;
-});
+//Route::get ('/login', [usuarioController::class, 'login'])->name('login');
+//Route::post ('/login', [usuarioController::class, 'user']);
+Route::get('/login', [cookieController::class, 'cookie'])->name('login');
+Route::post('/login', [cookieController::class, 'guardarcookie']);
 
 Route::get ('/recuperacio', [usuarioController::class, 'showrecuperacio'])->name('showrecuperacio');
 Route::post ('/recuperacio', [usuarioController::class, 'recuperacio'])->name('recuperacio');

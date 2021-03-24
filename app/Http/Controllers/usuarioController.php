@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\usuarioRequest;
+use Illuminate\Support\Facades\Cookie;
 
 class usuarioController extends Controller
 {
@@ -36,12 +37,18 @@ class usuarioController extends Controller
         //echo "estoy pasando por la funcion delete";
         return view ('users/deleteuser');
     }
-
-    public function login() {
+/* Las he modificado y pasado al CookieController
+    public function login(Request $request) {
         //echo "estoy pasando por la funcion login";
         return view ('auth/login');
     }
 
+    public function user() {
+        //echo "estoy pasando por la funcion login";
+        return redirect ('Users/indexuser');
+    }
+*/
+   
     public function showrecuperacio() {
         //echo "estoy pasando por la funcion recuperacio";
         return view ('auth/recuperacio');

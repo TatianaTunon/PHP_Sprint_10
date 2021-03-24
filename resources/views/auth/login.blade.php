@@ -11,10 +11,10 @@
 							<h1>Login</h1>
 					</div>
 			    </div>
-                <form action="{{ url('/login') }}" method="post" name="login">
+                <form action="{{ route('login') }}" method="post" name="login">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                        <label for="name" >Nombre</label>
+                        <input type="text" name="name"  class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter name">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Password</label>
@@ -29,7 +29,7 @@
                         <p class="text-center">¿No tienes cuenta? <a href="{{ route('create') }}" id="signup">Aquí puedes</a></p>
                     </div>
                     <div class="form-group">
-                        <p class="text-center">Has olvidado la contraseña <a href="{{ url('/recuperacio')}}" id="signup">Aquí puedes</a></p>
+                        <p class="text-center">Has olvidado la contraseña <a href="{{ route('recuperacio')}}" id="signup">Aquí puedes</a></p>
                     </div>
                 </form>
 			</div>
@@ -38,3 +38,4 @@
 </div>    
 </body>
 @endsection
+

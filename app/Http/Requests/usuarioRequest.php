@@ -3,7 +3,6 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-Request::cookie('usuario');
 
 class usuarioRequest extends FormRequest
 {
